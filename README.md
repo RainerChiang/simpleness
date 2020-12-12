@@ -1,19 +1,23 @@
-![Demo](https://raw.githubusercontent.com/RainerChiang/simpleness/master/images/screenshot.png)
-
-## hugo theme simpleness
+# Hugo Theme: Simpleness
 
 simpleness is a concise theme for hugo which is forked from [contrast-hugo](https://github.com/niklasbuschmann/contrast-hugo).
 
-[Demo](https://rainerchiang.github.io/simpleness/)
+![screenshot](https://raw.githubusercontent.com/RainerChiang/simpleness/master/images/screenshot.png)
 
-### Features
+## Live Demo
+
+- https://themes.gohugo.io/theme/simpleness/
+- https://rainerchiang.github.io/simpleness/
+- https://rainerchiang.github.io
+
+## Features
 
 - Responsive
 - MathJax suport
 - Google Analytics support
 - Comment systems include: disqus, valine
 
-### TODO
+## TODO
 
 - [ ] Table of content
 - [ ] Pagination for posts
