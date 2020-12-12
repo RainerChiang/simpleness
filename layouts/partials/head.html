@@ -1,0 +1,38 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{ hugo.Generator }}
+
+  <title>{{ if .IsHome }} {{ "Home" }} | {{ else }} {{ .Title }} | {{ end }} {{ .Site.Title }}</title>
+  {{- if or .Description .Site.Params.description }}
+  <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+  {{- end }}
+  {{- if .Params.favicon }}
+  <link rel="icon" href="{{ .Site.Params.favicon }}">
+  {{- end }}
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/index.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/classes.css">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="alternate" type="application/rss+xml" href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" title="{{ .Site.Title }}">
+  <!-- Font Awesome -->
+  <!-- <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  {{- if or .Params.enableMathJax .Site.Params.enableMathJax }}
+  <link 
+    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" 
+    integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" 
+    crossorigin="anonymous">
+  </link>
+  <script 
+    defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" 
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" 
+    crossorigin="anonymous">
+  </script>
+  <script 
+    defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" 
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" 
+    crossorigin="anonymous" 
+    onload="renderMathInElement(document.body);">
+  </script>  
+  {{- end }}
+</head>

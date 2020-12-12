@@ -1,0 +1,18 @@
+name = "simpleness"
+license = "MIT"
+licenselink = "https://github.com/RainerChiang/simpleness/blob/master/LICENSE"
+description = "A simple and concise Hugo theme"
+homepage = "https://github.com/RainerChiang/simpleness"
+tags = ["blog", "simple", "clean", "highlight", "readable"]
+features = ["blog", "simple", "clean", "highlight"]
+min_version = "0.51"
+
+[author]
+  name = "Rainer Chiang"
+  homepage = "https://rainerchiang.github.io/"
+  repo = "https://github.com/RainerChiang/simpleness"
+
+[original.author]
+  name = "Niklas Buschmann"
+  homepage = "https://github.com/niklasbuschmann/"
+  repo = "https://github.com/niklasbuschmann/contrast-hugo"
