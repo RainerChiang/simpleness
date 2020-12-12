@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shortcodes on Rainer Chiang</title>
+    <link>https://rainerchiang.github.io/simpleness/categories/shortcodes/</link>
+    <description>Recent content in Shortcodes on Rainer Chiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>[Rainer Chiang](/) &amp;#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)</copyright>
+    <lastBuildDate>Fri, 06 Sep 2019 12:13:36 +0530</lastBuildDate><atom:link href="https://rainerchiang.github.io/simpleness/categories/shortcodes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Short Codes</title>
+      <link>https://rainerchiang.github.io/simpleness/posts/post-6/</link>
+      <pubDate>Fri, 06 Sep 2019 12:13:36 +0530</pubDate>
+      
+      <guid>https://rainerchiang.github.io/simpleness/posts/post-6/</guid>
+      <description>Hugo ships with several Built-in Shortcodes for rich content, along with a Privacy Config and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.
+Images   Dave Herring     Dave Herring    Instagram Simple Shortcode &amp;lt; instagram_simple BGvuInzyFAe hidecaption &amp;gt;
+ YouTube Privacy Enhanced Shortcode &amp;lt; youtube ZJthWmvUzzc &amp;gt;
+ Twitter Simple Shortcode &amp;lt; twitter_simple 1085870671291310081 &amp;gt;</description>
+    </item>
+    
+  </channel>
+</rss>
