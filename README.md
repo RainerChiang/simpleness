@@ -40,6 +40,7 @@ hugo new site myBlog
 
 ```shell
 cd myBlog
+git init
 git submodule add https://github.com/RainerChiang/simpleness.git themes/simpleness
 ```
 
