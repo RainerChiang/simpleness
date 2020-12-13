@@ -7,6 +7,8 @@
   {{ $Pages = where site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ end }}
 
+{{ $ShowMonth := .Site.Params.showmonth}}
+
 <article class="archive">
   <header style="text-align: center;">
     {{ if .IsHome }}
@@ -27,11 +29,10 @@
     <h2 class="year">{{ .Key }}</h2>
 
     {{ range .Pages.GroupByDate "January"}}
-    {{ if $home }}<h3 class="month">{{ .Key }}</h3>{{ end }}
-    <ul class="post-item">
+    {{ if and $home $ShowMonth }}<h3 class="month">{{ .Key }}</h3>{{ end }}
     <!-- .Pages in $Pages -->
     {{ range .Pages }}
-      <li>
+      <li class="post-item">
       {{ if .Date }}
         <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
       {{ end }}
@@ -41,7 +42,6 @@
          end  -->
       </li>
       {{ end }}
-    </ul>
     {{ end }}
     
   {{ end }}

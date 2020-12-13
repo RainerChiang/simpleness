@@ -1,44 +1,52 @@
 @import url(fonts.css);
 
+/* custom variable */
+:root {
+  /* fonts */
+  --pt-sans-font: "PT Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+  --normal-font: Georgia, "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+  --motto-font: "Motto";
+  /* colors */
+  --white-color: #ffffff;
+  --blank-color: #1c1d22;
+  --gray-color: #8e8e91;
+  --metal-blue-color: #0000EE;
+  --dark-blue-color: #58A6FF;
+}
+
 @media (prefers-color-scheme: light) {
   html {
-    background: #ffffff;
-    color: #1c1d22;
+    background: var(--white-color);
+    color: var(--blank-color);
   }
 
   article a {
-    color: #0000EE;
+    color: var(--metal-blue-color);
   }
 
   .foot a:hover {
     text-decoration: underline;
-    color: #0000EE;
+    color: var(--metal-blue-color);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   html {
-    background: #1c1d22;
-    color: #ffffff;
+    background: var(--blank-color);
+    color: var(--white-color);
   }
 
   article a {
-    color: #58A6FF;
+    color: var(--dark-blue-color);
   }
 
   .foot a:hover {
     text-decoration: underline;
-    color: #58A6FF;
+    color: var(--dark-blue-color);
   }
 }
 
-/* custom variable */
-:root {
-  --pt-sans-font: "PT Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
-  --normal-font: Georgia, "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
-  --motto-font: "Motto";
-}
-
+/* ------- html start -------*/
 html {
   font-size: 16px;
   font-size: calc(0.8rem + 0.3vw);
@@ -54,14 +62,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-}
-
-b, strong, th {
-  font-weight: 600;
-}
-
 a {
   color: inherit;
   text-decoration: inherit;
@@ -70,25 +70,19 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/* ------- html end -------*/
 
-header time {
-  color: #8e8e91;
-}
 
+/* ------- post start -------*/
 hr {
   border: 1px solid rgba(142, 142, 145, 0.3);
   margin: 2em 0;
 }
 
-article:not(:last-child) {
-  border-bottom: 1px solid rgba(142, 142, 145, 0.12);
-}
-
 blockquote {
   background: rgba(142, 142, 145, 0.06);
   border-left: 3px solid rgba(142, 142, 145, 0.9);
-  padding: 1px 1.5em;
-  /* opacity: .75; */
+  padding: 1px 1em;
 }
 
 blockquote, figure {
@@ -101,7 +95,7 @@ img, li {
 
 img {
   border-radius: 5px;
-  max-width: 100%;
+  max-width: 85%;
   height: auto;
   /* center horizontally */
   margin-left: auto; 
@@ -128,23 +122,23 @@ pre {
   background: rgba(142, 142, 145, 0.12);
   border-radius: 2px;
   font-size: .8em;
-  /* font-family: 'Courier New', Courier, monospace; */
   margin: 1.5em 0;
-  padding: .8em 1.2em;
+  padding: .8em 1em;
   overflow-x: auto;
 }
 
 :not(pre) > code {
   font-size: .9em;
   background: rgba(142, 142, 145, 0.15);
-  /* opacity: .7; */
+  opacity: .9;
   border-radius: 2px;
   margin: 0 .1em;
   padding: .2em .4em;
 }
+/* ------- post end -------*/
 
 
-/* context start */
+/* ------- menus nva start -------*/
 body > header {
   display: flex;
   flex-wrap: wrap;
@@ -155,25 +149,6 @@ body > header {
   border-bottom: 1px solid rgba(142, 142, 145, 0.16);
 }
 
-body > header > a {
-  font-size: 1.3em;
-}
-
-article header {
-  margin-bottom: 1.5em;
-}
-
-article header h1 {
-  font-size: 1.8em;
-  margin: .5em .5em;
-}
-
-article h2 {
-  padding-bottom: 0.3em;
-  font-size: 1.5em;
-  border-bottom: 1px solid #eaecef;
-}
-
 nav {
   margin: .5em -.8em;
 }
@@ -182,23 +157,28 @@ nav a {
   margin: .5em .8em;
 }
 
-footer hr {
-  width: 45%;
-  border-style: dashed;
-  margin-bottom: 1em;
+body > header > nav >a {
+  font-size: 1em;
 }
 
-body > header, body > article, body > footer {
-  padding: 1.5em;
+body > header > .fontawesome > a {
+  text-decoration: none;
+}
+/* ------- menus nva end -------*/
+
+
+/* ------- archive start -------*/
+.hidden {
+  display: none;
 }
 
-@media (min-width: 32em) {
-  body > header, body > article, body > footer {
-    padding: 1.75em calc(38% - 12em);
-  }
+.slogan {
+  display: block;
+  font-family: var(--motto-font);
+  font-size: 1.8em;
+  color: #aaa;
+  margin-bottom: .25em;
 }
-
-/* ----------------------------------------------- */
 
 .archive li {
   font-size: 1.1em;
@@ -209,45 +189,76 @@ body > header, body > article, body > footer {
   display: inline-block;
   min-width: 10ch;
   margin: 0 .2em;
+  color: var(--gray-color);
+}
+/* ------- archive end -------*/
+
+
+article header {
+  margin-bottom: 1.5em;
 }
 
-.hidden {
-  display: none;
+/* article title */
+article header h1 {
+  font-size: 1.8em;
+  margin: .5em .5em;
 }
 
-.more {
-  margin: 2em 0 1em;
+/* post meta */
+article > header > .post-meta {
+  color: var(--gray-color);
 }
 
-.more a {
-  border-radius: 2px;
-  border: 1.5px solid #68f;
-  padding: .4em .8em;
-  transition: .2s;
+/* article ToC */
+article .toc a {
+  color: #DD0000;
 }
 
-.more a:hover {
-  color: #fff;
-  background: #68f;
-  text-decoration: inherit;
+article .text h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid #eaecef;
 }
 
-/***** custom *****/
-.fontawesome a {
-  text-decoration: none;
+article > footer > .end-line {
+  width: 45%;
+  border-style: dashed;
+  margin-bottom: 1em;
 }
 
-.post-meta {
-  color: #8e8e91;
+article > footer > .post-lastmod {
+  font-style: italic;
+  color: var(--gray-color);
 }
 
+/* comments */
 .comments-item {
   margin-top: 10%;
 }
 
+.comments-valine  .vcontent  p {
+  background: rgba(142, 142, 145, 0.04);
+}
+
+/* foot */
 .foot {
   margin: 1%;
-  color: #8e8e91;
+  color: var(--gray-color);
   text-align: center;
 }
 
+/* shadow in foot */
+article:not(:last-child) {
+  border-bottom: 1px solid rgba(142, 142, 145, 0.12);
+}
+
+body > header, body > article {
+  padding: 1.5em;
+}
+
+/* make body center */
+@media (min-width: 32em) {
+  body > header, body > article {
+    padding: 1.75em calc(38% - 12em);
+  }
+}

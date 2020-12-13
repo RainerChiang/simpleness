@@ -43,12 +43,18 @@
     </div>
   </header>
 
+  {{ if .Params.toc }}
+  <div class="toc">
+    {{ .TableOfContents }}  
+  </div>
+  {{ end }} 
+
   <div class="text">
-  {{ .Content }}
+    {{ .Content }}
   </div>
 
   <footer>
-    <hr id="end-line">
+    <hr class="end-line">
 
     {{ if and .Lastmod (ne .Lastmod .Date) }}
     <div class="post-lastmod">
