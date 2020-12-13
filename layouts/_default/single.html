@@ -1,16 +1,9 @@
 {{ define "main" }}
 
-<article id="article">
+<article class="article">
   <header>
-    {{ if .Params.categories }}
-      <i class="fas fa-folder"></i>
-      {{ range .Params.categories }}
-      <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-      &nbsp;
-      {{ end }}
-    {{ end }}
-
     <h1 style="text-align: center;" >{{ .Title }}</h1>
+
     <div class="post-meta">
     {{ if .Date }}
       <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 02, 2006" }}</time> &nbsp; 
@@ -39,33 +32,55 @@
       {{ $seconds }} {{ cond (eq $seconds 1) "second" "s" }}
       &nbsp;
     {{ end }}
+
+    {{ if .Params.categories }}
+      <i class="fas fa-folder"></i>
+      {{ range .Params.categories }}
+      <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+      &nbsp;
+      {{ end }}
+    {{ end }}
     </div>
   </header>
 
+  <div class="text">
   {{ .Content }}
+  </div>
 
-  {{ if or (gt .Params.tags 0) .Lastmod }}
   <footer>
-    <hr>
-    {{ if ne .Lastmod .Date }}
-    <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
-      update @ {{ .Lastmod.Format "January 02, 2006" }}
-    </time>
-    <p></p>
+    <hr id="end-line">
+
+    {{ if and .Lastmod (ne .Lastmod .Date) }}
+    <div class="post-lastmod">
+      <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+        update @ {{ .Lastmod.Format "January 02, 2006" }}
+      </time>
+      <p></p>
+    </div>
     {{ end }}
+
+    {{ if gt .Params.tags 0 }}
     <div class="post-tags">
-    {{ if .Params.tags }}
       <i class="fas fa-tags"></i>
       {{ range .Params.tags }}
         <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
         &nbsp;
       {{ end }}
-    {{ end }}
     </div>
-  </footer>
-  {{ end }}
+    {{ end }}
 
-  {{ partial "related.html" . }}
+    {{ $related := (where site.RegularPages "Type" "in" site.Params.mainSections).Related . | first 5 }}
+    {{ with $related }}
+    <div class="releated-posts">
+      <h3>Related Posts</h3>
+      {{ range . }}
+      <i class="fas fa-paperclip"></i>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <br>
+      {{ end }}
+    </div>
+    {{ end }}
+  </footer>
 
   {{ partial "comments.html" . }}
 

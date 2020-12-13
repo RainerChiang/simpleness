@@ -7,24 +7,28 @@
   {{ $Pages = where site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ end }}
 
-<article>
-  <header>
-    <h1>
+<article class="archive">
+  <header style="text-align: center;">
     {{ if .IsHome }}
-      <!-- Articles -->
+      {{ if .Site.Params.Slogan }}
+      <div class="slogan">
+        {{ .Site.Params.Slogan }}
+      </div>
+      {{ end }}
     {{ else }}
+    <h1>
       {{ .Title }}
-    {{ end }}
     </h1>
+    {{ end }}
   </header>
 
-  <div>
+  <div class="post-list">
   {{ range $Pages.GroupByDate "2006" }}
-    <h2>{{ .Key }}</h2>
-    {{ range .Pages.GroupByDate "January"}}
-    {{ if $home }}<h3>{{ .Key }}</h3>{{ end }}
+    <h2 class="year">{{ .Key }}</h2>
 
-    <ul class="archive">
+    {{ range .Pages.GroupByDate "January"}}
+    {{ if $home }}<h3 class="month">{{ .Key }}</h3>{{ end }}
+    <ul class="post-item">
     <!-- .Pages in $Pages -->
     {{ range .Pages }}
       <li>
@@ -39,10 +43,9 @@
       {{ end }}
     </ul>
     {{ end }}
+    
   {{ end }}
   </div>
-  
-  <!-- .Content  -->
 </article>
 
 {{ end }}
