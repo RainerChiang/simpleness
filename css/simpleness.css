@@ -1,0 +1,264 @@
+@import url(fonts.css);
+
+/* custom variable */
+:root {
+  /* fonts */
+  --pt-sans-font: "PT Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+  --normal-font: Georgia, "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+  --motto-font: "Motto";
+  /* colors */
+  --white-color: #ffffff;
+  --blank-color: #1c1d22;
+  --gray-color: #8e8e91;
+  --metal-blue-color: #0000EE;
+  --dark-blue-color: #58A6FF;
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    background: var(--white-color);
+    color: var(--blank-color);
+  }
+
+  article a {
+    color: var(--metal-blue-color);
+  }
+
+  .foot a:hover {
+    text-decoration: underline;
+    color: var(--metal-blue-color);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background: var(--blank-color);
+    color: var(--white-color);
+  }
+
+  article a {
+    color: var(--dark-blue-color);
+  }
+
+  .foot a:hover {
+    text-decoration: underline;
+    color: var(--dark-blue-color);
+  }
+}
+
+/* ------- html start -------*/
+html {
+  font-size: 16px;
+  font-size: calc(0.8rem + 0.3vw);
+}
+
+body {
+  font-family: var(--normal-font);
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* ------- html end -------*/
+
+
+/* ------- post start -------*/
+hr {
+  border: 1px solid rgba(142, 142, 145, 0.3);
+  margin: 2em 0;
+}
+
+blockquote {
+  background: rgba(142, 142, 145, 0.06);
+  border-left: 3px solid rgba(142, 142, 145, 0.9);
+  padding: 1px 1em;
+}
+
+blockquote, figure {
+  margin: 1em 0;
+}
+
+img, li {
+  margin: .5em 0;
+}
+
+img {
+  border-radius: 5px;
+  max-width: 85%;
+  height: auto;
+  /* center horizontally */
+  margin-left: auto; 
+  margin-right: auto;
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-spacing: 1px;
+  box-shadow: 0 0 0 1px rgba(142, 142, 145, 0.12) inset;
+}
+
+th, td {
+  padding: .5em 1em;
+  box-shadow: 0 0 0 1px rgba(142, 142, 145, 0.12);
+}
+
+tr:hover, tr:nth-child(odd) td {
+  background: rgba(142, 142, 145, 0.04);
+}
+
+pre {
+  background: rgba(142, 142, 145, 0.12);
+  border-radius: 2px;
+  font-size: .8em;
+  margin: 1.5em 0;
+  padding: .8em 1em;
+  overflow-x: auto;
+}
+
+:not(pre) > code {
+  font-size: .9em;
+  background: rgba(142, 142, 145, 0.15);
+  opacity: .9;
+  border-radius: 2px;
+  margin: 0 .1em;
+  padding: .2em .4em;
+}
+/* ------- post end -------*/
+
+
+/* ------- menus nva start -------*/
+body > header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 .6em rgba(28, 29, 34, 0.05);
+  border-bottom: 1px solid rgba(142, 142, 145, 0.16);
+}
+
+nav {
+  margin: .5em -.8em;
+}
+
+nav a {
+  margin: .5em .8em;
+}
+
+body > header > nav >a {
+  font-size: 1em;
+}
+
+body > header > .fontawesome > a {
+  text-decoration: none;
+}
+/* ------- menus nva end -------*/
+
+
+/* ------- archive start -------*/
+.hidden {
+  display: none;
+}
+
+.slogan {
+  display: block;
+  font-family: var(--motto-font);
+  font-size: 1.8em;
+  color: #aaa;
+  margin-bottom: .25em;
+}
+
+.archive li {
+  font-size: 1.1em;
+  list-style: none;
+}
+
+.archive time {
+  display: inline-block;
+  min-width: 10ch;
+  margin: 0 .2em;
+  color: var(--gray-color);
+}
+/* ------- archive end -------*/
+
+
+article header {
+  margin-bottom: 1.5em;
+}
+
+/* article title */
+article header h1 {
+  font-size: 1.8em;
+  margin: .5em .5em;
+}
+
+/* post meta */
+article > header > .post-meta {
+  color: var(--gray-color);
+}
+
+/* article ToC */
+article .toc a {
+  color: #DD0000;
+}
+
+article .text h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid #eaecef;
+}
+
+article > footer > .end-line {
+  width: 45%;
+  border-style: dashed;
+  margin-bottom: 1em;
+}
+
+article > footer > .post-lastmod {
+  font-style: italic;
+  color: var(--gray-color);
+}
+
+/* comments */
+.comments-item {
+  margin-top: 10%;
+}
+
+.comments-valine  .vcontent  p {
+  background: rgba(142, 142, 145, 0.04);
+}
+
+/* foot */
+.foot {
+  margin: 1%;
+  color: var(--gray-color);
+  text-align: center;
+}
+
+/* shadow in foot */
+article:not(:last-child) {
+  border-bottom: 1px solid rgba(142, 142, 145, 0.12);
+}
+
+body > header, body > article {
+  padding: 1.5em;
+}
+
+/* make body center */
+@media (min-width: 32em) {
+  body > header, body > article {
+    padding: 1.75em calc(38% - 12em);
+  }
+}

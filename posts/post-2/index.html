@@ -7,8 +7,7 @@
 
   <title> Markdown Syntax Guide |  Rainer Chiang</title>
   <meta name="description" content="Markdown Syntax Guide">
-  <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/index.css">
-  <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/classes.css">
+  <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/simpleness.css">
   <link rel="canonical" href="https://rainerchiang.github.io/simpleness/posts/post-2/">
   <link rel="alternate" type="application/rss+xml" href="" title="Rainer Chiang">
   
@@ -48,17 +47,10 @@
   
 </header>
 
-<article id="article">
+<article class="article">
   <header>
-    
-      <i class="fas fa-folder"></i>
-      
-      <a href="/simpleness/categories/hugo">Hugo</a>
-      &nbsp;
-      
-    
-
     <h1 style="text-align: center;" >Markdown Syntax Guide</h1>
+
     <div class="post-meta">
     
       <time datetime="2017-05-18T12:13:30&#43;05:30">May 18, 2017</time> &nbsp; 
@@ -87,10 +79,59 @@
       8 s
       &nbsp;
     
+
+    
+      <i class="fas fa-folder"></i>
+      
+      <a href="/simpleness/categories/hugo">Hugo</a>
+      &nbsp;
+      
+    
     </div>
   </header>
 
-  <p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
+  
+  <div class="toc">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#headings">Headings</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#h2">H2</a>
+      <ul>
+        <li><a href="#h3">H3</a></li>
+      </ul>
+    </li>
+    <li><a href="#paragraph">Paragraph</a></li>
+    <li><a href="#blockquotes">Blockquotes</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#tables">Tables</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#code-blocks">Code Blocks</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#list-types">List Types</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#other-elements--abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark</a></li>
+  </ul>
+</nav>  
+  </div>
+   
+
+  <div class="text">
+    <p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
 <h2 id="headings">Headings</h2>
 <p>The following HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> elements represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level while <code>&lt;h6&gt;</code> is the lowest.</p>
 <h1 id="h1">H1</h1>
@@ -229,18 +270,22 @@
 </li>
 </ol>
 </section>
+  </div>
 
-  
   <footer>
-    <hr>
+    <hr class="end-line">
+
     
-    <time datetime="2020-10-09T10:13:38&#43;08:00">
-      update @ October 09, 2020
-    </time>
-    <p></p>
+    <div class="post-lastmod">
+      <time datetime="2020-10-09T10:13:38&#43;08:00">
+        update @ October 09, 2020
+      </time>
+      <p></p>
+    </div>
+    
+
     
     <div class="post-tags">
-    
       <i class="fas fa-tags"></i>
       
         <a href="/simpleness/tags/markdown">Markdown</a>
@@ -249,22 +294,21 @@
         <a href="/simpleness/tags/test">test</a>
         &nbsp;
       
-    
     </div>
+    
+
+    
+    
+    <div class="releated-posts">
+      <h3>Related Posts</h3>
+      
+      <i class="fas fa-paperclip"></i>
+      <a href="/simpleness/posts/post-1/">Emoji Support</a>
+      <br>
+      
+    </div>
+    
   </footer>
-  
-
-  
-
-<div class="releated-post">
-  <h3>Related Posts</h3>
-  
-  <i class="fas fa-paperclip"></i>
-  <a href="/simpleness/posts/post-1/">Emoji Support</a>
-  <br>
-  
-</div>
-
 
   <div class="comments">
 
@@ -289,7 +333,7 @@
 
 
 
-  <div class="comments-item" >
+  <div class="comments-item comments-valine" >
     
     
     
@@ -327,10 +371,6 @@
 </article>
 
 
-
-  
-  
-  
 </body>
 <div class="foot">
   

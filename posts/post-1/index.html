@@ -7,8 +7,7 @@
 
   <title> Emoji Support |  Rainer Chiang</title>
   <meta name="description" content="You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more.">
-  <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/index.css">
-  <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/classes.css">
+  <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/simpleness.css">
   <link rel="canonical" href="https://rainerchiang.github.io/simpleness/posts/post-1/">
   <link rel="alternate" type="application/rss+xml" href="" title="Rainer Chiang">
   
@@ -48,17 +47,10 @@
   
 </header>
 
-<article id="article">
+<article class="article">
   <header>
-    
-      <i class="fas fa-folder"></i>
-      
-      <a href="/simpleness/categories/hugo">Hugo</a>
-      &nbsp;
-      
-    
-
     <h1 style="text-align: center;" >Emoji Support</h1>
+
     <div class="post-meta">
     
       <time datetime="2017-01-18T02:01:58&#43;05:30">January 18, 2017</time> &nbsp; 
@@ -85,10 +77,21 @@
       43 s
       &nbsp;
     
+
+    
+      <i class="fas fa-folder"></i>
+      
+      <a href="/simpleness/categories/hugo">Hugo</a>
+      &nbsp;
+      
+    
     </div>
   </header>
 
-  <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+   
+
+  <div class="text">
+    <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
 <p>The <a href="https://gohugo.io/functions/emojify/"><code>emojify</code></a> function can be called directly in templates or <a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes">Inline Shortcodes</a>.</p>
 <p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site&rsquo;s <a href="https://gohugo.io/getting-started/configuration/">configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
 <!-- raw HTML omitted -->
@@ -114,18 +117,22 @@
 </style>
 
 
+  </div>
 
-  
   <footer>
-    <hr>
+    <hr class="end-line">
+
     
-    <time datetime="2020-10-09T10:13:38&#43;08:00">
-      update @ October 09, 2020
-    </time>
-    <p></p>
+    <div class="post-lastmod">
+      <time datetime="2020-10-09T10:13:38&#43;08:00">
+        update @ October 09, 2020
+      </time>
+      <p></p>
+    </div>
+    
+
     
     <div class="post-tags">
-    
       <i class="fas fa-tags"></i>
       
         <a href="/simpleness/tags/emoji">emoji</a>
@@ -134,13 +141,12 @@
         <a href="/simpleness/tags/test">test</a>
         &nbsp;
       
-    
     </div>
+    
+
+    
+    
   </footer>
-  
-
-  
-
 
   <div class="comments">
 
@@ -165,7 +171,7 @@
 
 
 
-  <div class="comments-item" >
+  <div class="comments-item comments-valine" >
     
     
     
@@ -203,10 +209,6 @@
 </article>
 
 
-
-  
-  
-  
 </body>
 <div class="foot">
   

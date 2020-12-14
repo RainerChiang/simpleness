@@ -7,8 +7,7 @@
 
   <title> Math Type Setting |  Rainer Chiang</title>
   <meta name="description" content="The art of letting go.">
-  <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/index.css">
-  <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/classes.css">
+  <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/simpleness.css">
   <link rel="canonical" href="https://rainerchiang.github.io/simpleness/posts/post-3/">
   <link rel="alternate" type="application/rss+xml" href="" title="Rainer Chiang">
   
@@ -64,17 +63,10 @@
   
 </header>
 
-<article id="article">
+<article class="article">
   <header>
-    
-      <i class="fas fa-folder"></i>
-      
-      <a href="/simpleness/categories/hugo">Hugo</a>
-      &nbsp;
-      
-    
-
     <h1 style="text-align: center;" >Math Type Setting</h1>
+
     <div class="post-meta">
     
       <time datetime="2018-03-18T12:13:32&#43;05:30">March 18, 2018</time> &nbsp; 
@@ -101,10 +93,21 @@
       36 s
       &nbsp;
     
+
+    
+      <i class="fas fa-folder"></i>
+      
+      <a href="/simpleness/categories/hugo">Hugo</a>
+      &nbsp;
+      
+    
     </div>
   </header>
 
-  <p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
+   
+
+  <div class="text">
+    <p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
 <p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
 <ul>
 <li>Create a partial under <code>/layouts/partials/math.html</code></li>
@@ -133,18 +136,22 @@ $$
 \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
 $$</p>
 
+  </div>
 
-  
   <footer>
-    <hr>
+    <hr class="end-line">
+
     
-    <time datetime="2020-10-09T10:13:38&#43;08:00">
-      update @ October 09, 2020
-    </time>
-    <p></p>
+    <div class="post-lastmod">
+      <time datetime="2020-10-09T10:13:38&#43;08:00">
+        update @ October 09, 2020
+      </time>
+      <p></p>
+    </div>
+    
+
     
     <div class="post-tags">
-    
       <i class="fas fa-tags"></i>
       
         <a href="/simpleness/tags/mathjax">MathJax</a>
@@ -153,26 +160,25 @@ $$</p>
         <a href="/simpleness/tags/test">test</a>
         &nbsp;
       
-    
     </div>
+    
+
+    
+    
+    <div class="releated-posts">
+      <h3>Related Posts</h3>
+      
+      <i class="fas fa-paperclip"></i>
+      <a href="/simpleness/posts/post-2/">Markdown Syntax Guide</a>
+      <br>
+      
+      <i class="fas fa-paperclip"></i>
+      <a href="/simpleness/posts/post-1/">Emoji Support</a>
+      <br>
+      
+    </div>
+    
   </footer>
-  
-
-  
-
-<div class="releated-post">
-  <h3>Related Posts</h3>
-  
-  <i class="fas fa-paperclip"></i>
-  <a href="/simpleness/posts/post-2/">Markdown Syntax Guide</a>
-  <br>
-  
-  <i class="fas fa-paperclip"></i>
-  <a href="/simpleness/posts/post-1/">Emoji Support</a>
-  <br>
-  
-</div>
-
 
   <div class="comments">
 
@@ -197,7 +203,7 @@ $$</p>
 
 
 
-  <div class="comments-item" >
+  <div class="comments-item comments-valine" >
     
     
     
@@ -235,10 +241,6 @@ $$</p>
 </article>
 
 
-
-  
-  
-  
 </body>
 <div class="foot">
   
