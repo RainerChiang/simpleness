@@ -1,6 +1,6 @@
 # Hugo Theme: Simpleness
 
-simpleness is a concise theme for hugo which is forked from [contrast-hugo](https://github.com/niklasbuschmann/contrast-hugo).
+Simpleness is a concise theme for hugo which is ported from [contrast-hugo](https://github.com/niklasbuschmann/contrast-hugo).
 
 ![screenshot](https://raw.githubusercontent.com/RainerChiang/simpleness/master/images/screenshot.png)
 
