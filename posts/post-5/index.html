@@ -76,7 +76,7 @@
       
         2 min
       
-      40 s
+      43 s
       &nbsp;
     
 
@@ -129,21 +129,21 @@
 <pre><code>print 'this is pre tag'
 </code></pre>
 <p>Following is the syntax highlighted code block</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getCookie</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">r</span> <span style="color:#66d9ef">interface</span>{}) (<span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Cookie</span>, <span style="color:#66d9ef">error</span>) {
-	<span style="color:#a6e22e">rd</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.(<span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>)
-	<span style="color:#a6e22e">cookie</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">rd</span>.<span style="color:#a6e22e">Cookie</span>(<span style="color:#a6e22e">name</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span>
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">cookie</span>, <span style="color:#66d9ef">nil</span>
-}
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">setCookie</span>(<span style="color:#a6e22e">cookie</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Cookie</span>, <span style="color:#a6e22e">w</span> <span style="color:#66d9ef">interface</span>{}) <span style="color:#66d9ef">error</span> {
-	<span style="color:#75715e">// Get write interface registered using `Acquire` method in handlers.
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">wr</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">w</span>.(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>)
-	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">SetCookie</span>(<span style="color:#a6e22e">wr</span>, <span style="color:#a6e22e">cookie</span>)
-	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
-}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getCookie</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">r</span> <span style="color:#66d9ef">interface</span>{}) (<span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Cookie</span>, <span style="color:#66d9ef">error</span>) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>	<span style="color:#a6e22e">rd</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.(<span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>	<span style="color:#a6e22e">cookie</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">rd</span>.<span style="color:#a6e22e">Cookie</span>(<span style="color:#a6e22e">name</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>	}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">cookie</span>, <span style="color:#66d9ef">nil</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">setCookie</span>(<span style="color:#a6e22e">cookie</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Cookie</span>, <span style="color:#a6e22e">w</span> <span style="color:#66d9ef">interface</span>{}) <span style="color:#66d9ef">error</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>	<span style="color:#75715e">// Get write interface registered using `Acquire` method in handlers.
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">wr</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">w</span>.(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">SetCookie</span>(<span style="color:#a6e22e">wr</span>, <span style="color:#a6e22e">cookie</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>}
 </code></pre></div><p>This is blockquote, Will make it <em>better now</em></p>
 <blockquote>
 <p>&lsquo;I want to do with you what spring does with the cherry trees.&rsquo; <!-- raw HTML omitted -->cited ~Pablo Neruda<!-- raw HTML omitted -->*</p>

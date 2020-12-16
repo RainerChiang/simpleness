@@ -62,7 +62,7 @@ Images   Dave Herring     Dave Herring    Instagram Simple Shortcode &amp;lt; in
       <guid>https://rainerchiang.github.io/simpleness/posts/post-3/</guid>
       <description>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.
 In this example we will be using KaTeX
- Create a partial under /layouts/partials/math.html Within this partial reference the Auto-render Extension or host these scripts locally. Include the partial in your templates like so:  {{ if or .Params.math .Site.Params.math }} {{ partial &amp;#34;math.html&amp;#34; . }} {{ end }}  To enable KaTex globally set the parameter math to true in a project&amp;rsquo;s configuration To enable KaTex on a per page basis include the parameter math: true in content files  Note: Use the online reference of Supported TeX Functions</description>
+ Create a partial under /layouts/partials/math.html Within this partial reference the Auto-render Extension or host these scripts locally. Include the partial in your templates like so:  1{{ if or .Params.math .Site.Params.math }} 2{{ partial &amp;#34;math.html&amp;#34; . }} 3{{ end }}  To enable KaTex globally set the parameter math to true in a project&amp;rsquo;s configuration To enable KaTex on a per page basis include the parameter math: true in content files  Note: Use the online reference of Supported TeX Functions</description>
     </item>
     
     <item>
