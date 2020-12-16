@@ -58,3 +58,7 @@ hugo server
 ```
 
 then, open http://localhost:1313/ in your browser。
+
+## Example Repository
+
+There's a example repo [RainerChiang/upload-theme](https://github.com/RainerChiang/upload-theme) on Github as a reference.
