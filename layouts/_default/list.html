@@ -28,6 +28,7 @@
   {{ range $Pages.GroupByDate "2006" }}
     <h2 class="year">{{ .Key }}</h2>
 
+    <ul>
     {{ range .Pages.GroupByDate "January"}}
     {{ if and $home $ShowMonth }}<h3 class="month">{{ .Key }}</h3>{{ end }}
     <!-- .Pages in $Pages -->
@@ -43,6 +44,7 @@
       </li>
       {{ end }}
     {{ end }}
+    </ul>
     
   {{ end }}
   </div>
