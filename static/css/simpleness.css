@@ -95,7 +95,7 @@ img, li {
 
 img {
   border-radius: 5px;
-  max-width: 85%;
+  max-width: 95%;
   height: auto;
   /* center horizontally */
   margin-left: auto; 
@@ -178,6 +178,10 @@ body > header > .fontawesome > a {
   font-size: 1.8em;
   color: #aaa;
   margin-bottom: .25em;
+}
+
+.archive ul {
+  padding-inline-start: 0;
 }
 
 .archive li {
