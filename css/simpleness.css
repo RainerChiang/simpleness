@@ -73,7 +73,7 @@ a:hover {
 /* ------- html end -------*/
 
 
-/* ------- post start -------*/
+/* ------- post text start -------*/
 hr {
   border: 1px solid rgba(142, 142, 145, 0.3);
   margin: 2em 0;
@@ -135,7 +135,13 @@ pre {
   margin: 0 .1em;
   padding: .2em .4em;
 }
-/* ------- post end -------*/
+
+/* for lineNumbersInTable */
+.highlight pre {
+  margin: 0.2em 0;
+  padding: 0.3em 0.2em;
+}
+/* ------- post text end -------*/
 
 
 /* ------- menus nva start -------*/
