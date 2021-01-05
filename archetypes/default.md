@@ -11,6 +11,5 @@ tags: []
 draft: false
 enableDisqus : false
 enableMathJax: false
-disableToC: false
-disableAutoCollapse: true
+toc: false
 ---
