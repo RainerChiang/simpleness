@@ -1,0 +1,27 @@
+<nav class="navigation">
+  <div class="nav-left">
+    {{ if not (gt (len .Site.Menus) 0) }}
+    <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    {{ end }}
+    <div class="nav-item nav-title">
+      <a href="/"> {{ .Site.Title }}</a>
+    </div>
+    <div class="nav-item nav-menu">
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}"> {{ .Name }}</a>
+      {{ end }}
+    </div>
+  </div>
+  <div class="nav-item nav-right fontawesome">
+    {{ if .Site.Social.github }}
+    <a href="{{ .Site.Social.github }}" target="_blank">
+      <i title="GitHub" class="fab fa-github"></i>
+    </a>
+    {{ end }}
+    {{ if .Site.Social.rss }}
+    <a href="{{ "index.xml" | absLangURL }}" target="_blank">
+      <i title="RSS" class="fas fa-rss"></i>
+    </a>
+    {{ end }}
+  </div>
+</nav>

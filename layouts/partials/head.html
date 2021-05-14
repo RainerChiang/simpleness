@@ -2,8 +2,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {{ hugo.Generator }}
-
-  <title>{{ if .IsHome }} {{ "Home" }} | {{ else }} {{ .Title }} | {{ end }} {{ .Site.Title }}</title>
+  <title>{{ if .IsHome }} {{ .Site.Title }} {{ else }} {{ .Title }} | {{ .Site.Title }} {{ end }}</title>
   {{- if or .Description .Site.Params.description }}
   <meta name="description" content="{{ .Description | default .Site.Params.description }}">
   {{- end }}
@@ -34,4 +33,7 @@
     onload="renderMathInElement(document.body);">
   </script>  
   {{- end }}
+  {{ if .Site.GoogleAnalytics }}
+  {{ template "_internal/google_analytics.html" . }}
+  {{ end }}
 </head>

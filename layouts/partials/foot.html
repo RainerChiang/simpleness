@@ -1,12 +1,7 @@
 <div class="foot">
   {{ $start := .Site.Params.startyear }}
-  {{ with .Site.Copyright }}
-    &copy; {{ $start }} - {{ now.Format "2006" }} &#183; 
-    {{ . | markdownify }} &#183;
-    <a href="#"><i class="fas fa-chevron-up"></i></a>
-  {{ end }}
-
-  {{ if .Site.GoogleAnalytics }}
-  {{ template "_internal/google_analytics.html" . }}
-  {{ end }}
+  &copy; {{ $start }} - {{ now.Format "2006" }} &#183;
+  <a href="/"> {{ .Site.Title }} </a> &#183;
+  Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
+  <a href="#"><i class="fas fa-chevron-up"></i></a>
 </div>
