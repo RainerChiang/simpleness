@@ -35,11 +35,12 @@
     </div>
   </header>
 
-  <!-- {{ if .Params.toc }}
+  {{ if and .Params.toc .TableOfContents }}
   <div class="post-toc">
-    {{ .TableOfContents }}  
+    <div class="post-toc-title">Contents</div>
+    {{ .TableOfContents }}
   </div>
-  {{ end }}  -->
+  {{ end }}
 
   <div class="post-text">
     {{ .Content }}

@@ -59,6 +59,10 @@
     margin: .1em .1em;
     padding: .1em .3em;
   }
+  .post-toc li a {
+  color: var(--blank-color);
+  text-decoration: none;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -297,6 +301,42 @@ article h5, h6 {
   background-color:#a8a8a8;
   border: 2px solid #eff1f5
 }
+
+/* ------- post toc -------*/
+.post-toc {
+  /* display: none; */
+  position: fixed;
+  overflow-y: auto;
+  left: 50%;
+  top: 9em;
+  font-size: 0.9em;
+  width: 35em;
+  margin-left: 30em;
+  padding-left: 1em;
+  max-height: 85%;
+}
+.post-toc-title {
+  font-weight: bold;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+.post-toc ul {
+  padding-left: 1em;
+}
+.post-toc li {
+  list-style: none;
+  padding-left: 1em;
+  margin-top: 2px;
+}
+.post-toc li a.active {
+  font-weight: bold;
+}
+@media screen and (min-width: 1400px) {
+  .post-toc {
+    display: block;
+  }
+}
+/* ------- post toc end -------*/
 /* ========================== post text end ========================== */
 
 
