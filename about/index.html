@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Hugo 0.75.1" />
-
-  <title> About |  Rainer Chiang</title>
+  <title> About | Rainer Chiang </title>
   <meta name="description" content="A simple and concise hugo theme.">
   <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/simpleness.css">
   <link rel="canonical" href="https://rainerchiang.github.io/simpleness/about/">
@@ -13,51 +12,59 @@
   
   
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-</head>
-
-<body>
-  <header class="menus">
   
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-162425220-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
 
-  <nav >
+  
+</head>
+<body class="container">
+  <nav class="navigation">
+  <div class="nav-left">
     
-    <a href="/simpleness/"> Home</a>
-    
-    <a href="/simpleness/projects/"> Projects</a>
-    
-    <a href="/simpleness/about/"> About</a>
-    
-  </nav>
-
-  <nav class="fontawesome">
+    <div class="nav-item nav-title">
+      <a href="https://rainerchiang.github.io/simpleness/"> Rainer Chiang</a>
+    </div>
+    <div class="nav-item nav-menu">
+      
+      <a href="/simpleness/projects/"> Projects</a>
+      
+      <a href="/simpleness/about/"> About</a>
+      
+    </div>
+  </div>
+  <div class="nav-item nav-right fontawesome">
     
     <a href="https://github.com/RainerChiang" target="_blank">
-        <i title="GitHub" class="fab fa-github"></i>
+      <i title="GitHub" class="fab fa-github"></i>
     </a>
     
     
     <a href="https://rainerchiang.github.io/simpleness/index.xml" target="_blank">
-        <i title="RSS" class="fas fa-rss"></i>
+      <i title="RSS" class="fas fa-rss"></i>
     </a>
     
-  </nav>
+  </div>
+</nav>
   
-  
-  <div class="hidden description">A simple and concise hugo theme.</div>
-  
-</header>
-
-<article class="article">
-  <header>
+<article class="post">
+  <header class="post-header">
     <h1 style="text-align: center;" >About</h1>
-
-    <div class="post-meta">
+    <div class="post-metadata">
     
       <time datetime="2020-09-22T10:37:58&#43;05:30">September 22, 2020</time> &nbsp; 
     
-
-    Rainer Chiang &nbsp;
-
     
     
       <i class="far fa-eye"></i>
@@ -66,33 +73,28 @@
       </span> &nbsp;
     
     
-
     
       <i class="far fa-clock"></i>
       
       
       
-
       
       3 s
       &nbsp;
     
-
     
     </div>
   </header>
 
-   
+  
 
-  <div class="text">
+  <div class="post-text">
     <h2 id="about-yourself">About Yourself</h2>
 <p>This is some static page where you can write about yourself.</p>
 
   </div>
 
-  <footer>
-    <hr class="end-line">
-
+  <footer class="post-footer">
     
 
     
@@ -100,10 +102,11 @@
     
     
   </footer>
-
+  
+  <div class="comments">
   <div class="comments">
 
-  <div class="comments-item">
+  <div class="comments-item comments-disqus">
     <div id="disqus_thread"></div>
     <script>
       window.addEventListener("load", () => {
@@ -158,43 +161,23 @@
   </div>
 
 </div>
-
+  </div>
 </article>
 
-
-</body>
-<div class="foot">
+  <div class="foot">
   
-  
-    &copy; 2019 - 2021 &#183; 
-    <a href="/">Rainer Chiang</a> · Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
-    <a href="#"><i class="fas fa-chevron-up"></i></a>
-  
-
-  
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-162425220-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-  
+  &copy; 2019 - 2021 &#183;
+  <a href="/"> Rainer Chiang </a> &#183;
+  Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
+  <a href="#"><i class="fas fa-chevron-up"></i></a>
 </div>
-
-<script src="/simpleness/js/lazyload.min.js"></script>
+</body>
+  <script src="/simpleness/js/lazyload.min.js"></script>
 <script>
-  var lazyImage = new LazyLoad({
-    container: document.getElementById('article')
-  });
+  var lazyImage = new LazyLoad({container: document.getElementById('article')});
 </script>
+
+
 
 
 </html>

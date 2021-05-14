@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Hugo 0.75.1" />
-
-  <title> Math Type Setting |  Rainer Chiang</title>
+  <title> Math Type Setting | Rainer Chiang </title>
   <meta name="description" content="The art of letting go.">
   <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/simpleness.css">
   <link rel="canonical" href="https://rainerchiang.github.io/simpleness/posts/post-3/">
@@ -29,51 +28,59 @@
     crossorigin="anonymous" 
     onload="renderMathInElement(document.body);">
   </script>
-</head>
-
-<body>
-  <header class="menus">
   
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-162425220-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
 
-  <nav >
+  
+</head>
+<body class="container">
+  <nav class="navigation">
+  <div class="nav-left">
     
-    <a href="/simpleness/"> Home</a>
-    
-    <a href="/simpleness/projects/"> Projects</a>
-    
-    <a href="/simpleness/about/"> About</a>
-    
-  </nav>
-
-  <nav class="fontawesome">
+    <div class="nav-item nav-title">
+      <a href="https://rainerchiang.github.io/simpleness/"> Rainer Chiang</a>
+    </div>
+    <div class="nav-item nav-menu">
+      
+      <a href="/simpleness/projects/"> Projects</a>
+      
+      <a href="/simpleness/about/"> About</a>
+      
+    </div>
+  </div>
+  <div class="nav-item nav-right fontawesome">
     
     <a href="https://github.com/RainerChiang" target="_blank">
-        <i title="GitHub" class="fab fa-github"></i>
+      <i title="GitHub" class="fab fa-github"></i>
     </a>
     
     
     <a href="https://rainerchiang.github.io/simpleness/index.xml" target="_blank">
-        <i title="RSS" class="fas fa-rss"></i>
+      <i title="RSS" class="fas fa-rss"></i>
     </a>
     
-  </nav>
+  </div>
+</nav>
   
-  
-  <div class="hidden description">A simple and concise hugo theme.</div>
-  
-</header>
-
-<article class="article">
-  <header>
+<article class="post">
+  <header class="post-header">
     <h1 style="text-align: center;" >Math Type Setting</h1>
-
-    <div class="post-meta">
+    <div class="post-metadata">
     
       <time datetime="2018-03-18T12:13:32&#43;05:30">March 18, 2018</time> &nbsp; 
     
-
-    Rainer Chiang &nbsp;
-
     
     
       <i class="far fa-eye"></i>
@@ -82,18 +89,15 @@
       </span> &nbsp;
     
     
-
     
       <i class="far fa-clock"></i>
       
       
       
-
       
-      37 s
+      36 s
       &nbsp;
     
-
     
       <i class="fas fa-folder"></i>
       
@@ -104,9 +108,9 @@
     </div>
   </header>
 
-   
+  
 
-  <div class="text">
+  <div class="post-text">
     <p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
 <p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
 <ul>
@@ -114,19 +118,10 @@
 <li>Within this partial reference the <a href="https://katex.org/docs/autorender.html">Auto-render Extension</a> or host these scripts locally.</li>
 <li>Include the partial in your templates like so:</li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span> <span style="color:#66d9ef">if</span> or .Params.math .Site.Params.math <span style="color:#f92672">}}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span> <span style="color:#66d9ef">if</span> or .Params.math .Site.Params.math <span style="color:#f92672">}}</span>
 <span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;math.html&#34;</span> . <span style="color:#f92672">}}</span>
 <span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
-</code></pre></td></tr></table>
-</div>
-</div><ul>
+</code></pre></div><ul>
 <li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
 <li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files</li>
 </ul>
@@ -147,9 +142,7 @@ $$</p>
 
   </div>
 
-  <footer>
-    <hr class="end-line">
-
+  <footer class="post-footer">
     
     <div class="post-lastmod">
       <time datetime="2020-10-09T10:13:38&#43;08:00">
@@ -174,8 +167,8 @@ $$</p>
 
     
     
-    <div class="releated-posts">
-      <h3>Related Posts</h3>
+    <div class="related-posts">
+      <h4>Related Posts</h4>
       
       <i class="fas fa-paperclip"></i>
       <a href="/simpleness/posts/post-2/">Markdown Syntax Guide</a>
@@ -188,10 +181,11 @@ $$</p>
     </div>
     
   </footer>
-
+  
+  <div class="comments">
   <div class="comments">
 
-  <div class="comments-item">
+  <div class="comments-item comments-disqus">
     <div id="disqus_thread"></div>
     <script>
       window.addEventListener("load", () => {
@@ -246,43 +240,23 @@ $$</p>
   </div>
 
 </div>
-
+  </div>
 </article>
 
-
-</body>
-<div class="foot">
+  <div class="foot">
   
-  
-    &copy; 2019 - 2021 &#183; 
-    <a href="/">Rainer Chiang</a> · Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
-    <a href="#"><i class="fas fa-chevron-up"></i></a>
-  
-
-  
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-162425220-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-  
+  &copy; 2019 - 2021 &#183;
+  <a href="/"> Rainer Chiang </a> &#183;
+  Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
+  <a href="#"><i class="fas fa-chevron-up"></i></a>
 </div>
-
-<script src="/simpleness/js/lazyload.min.js"></script>
+</body>
+  <script src="/simpleness/js/lazyload.min.js"></script>
 <script>
-  var lazyImage = new LazyLoad({
-    container: document.getElementById('article')
-  });
+  var lazyImage = new LazyLoad({container: document.getElementById('article')});
 </script>
+
+
 
 
 </html>
