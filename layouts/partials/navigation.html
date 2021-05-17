@@ -13,6 +13,11 @@
     </div>
   </div>
   <div class="nav-item nav-right fontawesome">
+    {{ if .Site.Social.twitter }}
+    <a href="{{ .Site.Social.twitter }}" target="_blank">
+      <i title="Twitter" class="fab fa-twitter"></i>
+    </a>
+    {{ end }}
     {{ if .Site.Social.github }}
     <a href="{{ .Site.Social.github }}" target="_blank">
       <i title="GitHub" class="fab fa-github"></i>
