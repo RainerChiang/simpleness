@@ -47,7 +47,7 @@ git submodule add https://github.com/RainerChiang/simpleness.git themes/simplene
 copy the content of exampleSite
 
 ```shell
-cp themes/simepleness/exampleSite/config.toml .
+cp themes/simpleness/exampleSite/config.toml .
 cp -r themes/simpleness/exampleSite/content .
 ```
 
