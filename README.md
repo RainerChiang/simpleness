@@ -6,20 +6,18 @@ Simpleness is a concise theme for hugo which is ported from [contrast-hugo](http
 
 ## Live Demo
 
-- https://themes.gohugo.io/theme/simpleness/
 - https://rainerchiang.github.io/simpleness/
 - https://rainerchiang.github.io
 
 ## Features
 
-- Responsive
 - MathJax suport
 - Google Analytics support
 - Comment systems include: disqus, valine
+- Table of content
 
 ## TODO
 
-- [ ] Table of content
 - [ ] Pagination for posts
 
 ## Quick Start
