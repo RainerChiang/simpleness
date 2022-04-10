@@ -14,9 +14,10 @@
       
       <guid>https://rainerchiang.github.io/simpleness/posts/post-6/</guid>
       <description>Hugo ships with several Built-in Shortcodes for rich content, along with a Privacy Config and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.
-Images   Dave Herring     Dave Herring    Instagram Simple Shortcode &amp;lt; instagram_simple BGvuInzyFAe hidecaption &amp;gt;
+Images  Dave Herring    Dave Herring    Instagram Simple Shortcode &amp;lt; instagram_simple BGvuInzyFAe hidecaption &amp;gt;
  YouTube Privacy Enhanced Shortcode &amp;lt; youtube ZJthWmvUzzc &amp;gt;
- Twitter Simple Shortcode &amp;lt; twitter_simple 1085870671291310081 &amp;gt;</description>
+ Twitter Simple Shortcode &amp;lt; twitter_simple 1085870671291310081 &amp;gt;
+ Vimeo Simple Shortcode &amp;lt; vimeo_simple 48912912 &amp;gt;</description>
     </item>
     
   </channel>

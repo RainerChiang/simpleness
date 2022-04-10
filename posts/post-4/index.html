@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.75.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <title> 中文测试 | Rainer Chiang </title>
   <meta name="description" content="Start by getting a small backpack (less than 20 liters) and then just travel with what fits in that.">
   <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/simpleness.css">
@@ -26,7 +26,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 </head>
 <body class="container">
@@ -46,6 +45,7 @@ if (!doNotTrack) {
   </div>
   <div class="nav-item nav-right fontawesome">
     
+    
     <a href="https://github.com/RainerChiang" target="_blank">
       <i title="GitHub" class="fab fa-github"></i>
     </a>
@@ -57,6 +57,7 @@ if (!doNotTrack) {
     
   </div>
 </nav>
+
   
 <article class="post">
   <header class="post-header">
@@ -177,7 +178,8 @@ if (!doNotTrack) {
     
     
     <div id="vcomments"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    
+    <script src="//code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <script type="text/javascript">
       new Valine({
@@ -190,6 +192,7 @@ if (!doNotTrack) {
           requiredFields: ["nick","mail"],
           avatar: "robohash",
           visitor:  true ,
+          serverURLs: "https://CXhRxgF1.api.lncldglobal.com",
           recordIP: true
       });
     </script>
@@ -211,7 +214,7 @@ if (!doNotTrack) {
 
   <div class="foot">
   
-  &copy; 2019 - 2021 &#183;
+  &copy; 2019 - 2022 &#183;
   <a href="/"> Rainer Chiang </a> &#183;
   Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
   <a href="#"><i class="fas fa-chevron-up"></i></a>

@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.75.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <title> Math Type Setting | Rainer Chiang </title>
   <meta name="description" content="The art of letting go.">
   <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/simpleness.css">
@@ -42,7 +42,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 </head>
 <body class="container">
@@ -62,6 +61,7 @@ if (!doNotTrack) {
   </div>
   <div class="nav-item nav-right fontawesome">
     
+    
     <a href="https://github.com/RainerChiang" target="_blank">
       <i title="GitHub" class="fab fa-github"></i>
     </a>
@@ -73,6 +73,7 @@ if (!doNotTrack) {
     
   </div>
 </nav>
+
   
 <article class="post">
   <header class="post-header">
@@ -95,7 +96,7 @@ if (!doNotTrack) {
       
       
       
-      36 s
+      32 s
       &nbsp;
     
     
@@ -118,10 +119,10 @@ if (!doNotTrack) {
 <li>Within this partial reference the <a href="https://katex.org/docs/autorender.html">Auto-render Extension</a> or host these scripts locally.</li>
 <li>Include the partial in your templates like so:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span> <span style="color:#66d9ef">if</span> or .Params.math .Site.Params.math <span style="color:#f92672">}}</span>
-<span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;math.html&#34;</span> . <span style="color:#f92672">}}</span>
-<span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">{{</span> <span style="color:#66d9ef">if</span> or .Params.math .Site.Params.math <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;math.html&#34;</span> . <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
+</span></span></code></pre></div><ul>
 <li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
 <li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files</li>
 </ul>
@@ -211,7 +212,8 @@ $$</p>
     
     
     <div id="vcomments"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    
+    <script src="//code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <script type="text/javascript">
       new Valine({
@@ -224,6 +226,7 @@ $$</p>
           requiredFields: ["nick","mail"],
           avatar: "robohash",
           visitor:  true ,
+          serverURLs: "https://CXhRxgF1.api.lncldglobal.com",
           recordIP: true
       });
     </script>
@@ -245,7 +248,7 @@ $$</p>
 
   <div class="foot">
   
-  &copy; 2019 - 2021 &#183;
+  &copy; 2019 - 2022 &#183;
   <a href="/"> Rainer Chiang </a> &#183;
   Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
   <a href="#"><i class="fas fa-chevron-up"></i></a>

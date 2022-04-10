@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.75.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <title> Emoji Support | Rainer Chiang </title>
   <meta name="description" content="You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more.">
   <link rel="stylesheet" href="https://rainerchiang.github.io/simpleness/css/simpleness.css">
@@ -26,7 +26,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 </head>
 <body class="container">
@@ -46,6 +45,7 @@ if (!doNotTrack) {
   </div>
   <div class="nav-item nav-right fontawesome">
     
+    
     <a href="https://github.com/RainerChiang" target="_blank">
       <i title="GitHub" class="fab fa-github"></i>
     </a>
@@ -57,6 +57,7 @@ if (!doNotTrack) {
     
   </div>
 </nav>
+
   
 <article class="post">
   <header class="post-header">
@@ -102,9 +103,9 @@ if (!doNotTrack) {
 <p>The <a href="http://www.emoji-cheat-sheet.com/">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
 <hr>
 <p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">.emoji {
-  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>.emoji {
+</span></span><span style="display:flex;"><span>  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 
 <style>
 .emojify {
@@ -179,7 +180,8 @@ if (!doNotTrack) {
     
     
     <div id="vcomments"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    
+    <script src="//code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <script type="text/javascript">
       new Valine({
@@ -192,6 +194,7 @@ if (!doNotTrack) {
           requiredFields: ["nick","mail"],
           avatar: "robohash",
           visitor:  true ,
+          serverURLs: "https://CXhRxgF1.api.lncldglobal.com",
           recordIP: true
       });
     </script>
@@ -213,7 +216,7 @@ if (!doNotTrack) {
 
   <div class="foot">
   
-  &copy; 2019 - 2021 &#183;
+  &copy; 2019 - 2022 &#183;
   <a href="/"> Rainer Chiang </a> &#183;
   Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
   <a href="#"><i class="fas fa-chevron-up"></i></a>
