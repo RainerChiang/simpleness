@@ -21,16 +21,7 @@
 {{ end }}
 
 {{ if .Site.Params.valine.enable }}
-  <div class="comments-item comments-valine" >
-    <!-- visitor count -->
-    {{ if and (not .Site.Params.valine.enableHeaderVisitor) (or (ne .Site.BaseURL "http://localhost:1313/") .Site.Params.valine.debug) }}
-      <span id="{{ .URL | relURL }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
-        {{ T "valinePV"}}
-        <span class="leancloud-visitors-count">0</span> Views
-        <p></p>
-      </span>
-    {{ end }}
-    
+  <div class="comments-item comments-valine">
     <div id="vcomments"></div>
     <script src="//code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script>
     <!-- <script src="//unpkg.com/leancloud-storage@4.12.0/dist/av-min.js"></script> -->
