@@ -1,6 +1,6 @@
 name = "simpleness"
 license = "MIT"
-licenselink = "https://github.com/RainerChiang/simpleness/blob/master/LICENSE"
+licenselink = "https://github.com/RainerChiang/simpleness/blob/main/LICENSE"
 description = "A simple and concise Hugo theme"
 homepage = "https://github.com/RainerChiang/simpleness"
 tags = ["blog", "simple", "clean", "highlight", "readable"]
