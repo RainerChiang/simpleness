@@ -1,15 +1,11 @@
 baseURL = "http://example.org/"
 languageCode = "en"
 DefaultContentLanguage = "en"
+theme = "simpleness"
+
+title = "Rainer Chiang"
 enableInlineShortcodes = true
 enableEmoji = true
-# pagination = 10
-
-title = "Hugo"
-author = "Rainer Chiang"
-copyright = "[Home](/) &#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)"
-
-theme = "simpleness"
 googleAnalytics = ""
 
 [params]
@@ -18,8 +14,6 @@ googleAnalytics = ""
   enableReadingTime = true
   favicon = "favicon.ico"
   startyear = "2019"
-  showmonth = true
-  slogan = "always make it happen"
   description = "A simple and concise hugo theme."
   disqus = ""
 
@@ -32,8 +26,8 @@ googleAnalytics = ""
   requiredFields = ['nick', 'mail']
   avatar = 'robohash'
   visitor = true
-  enableHeaderVisitor = true
-  debug = true
+  serverURLS = 'https://abc123.api.lncldglobal.com'
+  debug = false # display the visitor counts when using 'hugo server'
 
 [menu]
   [[menu.main]]
@@ -57,12 +51,12 @@ tag = "tags"
 # syntax style: https://xyproto.github.io/splash/docs/longer/all.html
 [markup]
   [markup.highlight]
-    codeFences = true
-    guessSyntax = false
+    guessSyntax = true
     hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
+    # lineNoStart = 1
+    # lineNos = true
+    # lineNumbersInTable = true
     noClasses = true
     style = "monokai" # github, dracula, vim, monokai
     tabWidth = 4
+    
