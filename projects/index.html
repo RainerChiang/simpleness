@@ -88,6 +88,15 @@ if (!doNotTrack) {
   </header>
 
   
+  <div class="post-toc">
+    <div class="post-toc-title">Contents</div>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#simplenesshttpsgithubcomrainerchiangsimpleness"><a href="https://github.com/RainerChiang/simpleness">simpleness</a></a></li>
+  </ul>
+</nav>
+  </div>
+  
 
   <div class="post-text">
     <h2 id="simplenesshttpsgithubcomrainerchiangsimpleness"><a href="https://github.com/RainerChiang/simpleness">simpleness</a></h2>
@@ -178,6 +187,44 @@ if (!doNotTrack) {
 </script>
 
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+<script>
+    (function() {
+        var $toc = $('#TableOfContents');
+        if ($toc.length > 0) {
+            var $window = $(window);
+
+            function onScroll(){
+                var currentScroll = $window.scrollTop();
+                var h = $('.post-text h1, .post-text h2, .post-text h3, .post-text h4, .post-text h5, .post-text h6');
+                var id = "";
+                h.each(function (i, e) {
+                    e = $(e);
+                    if (e.offset().top - 10 <= currentScroll) {
+                        id = e.attr('id');
+                    }
+                });
+                var active = $toc.find('a.active');
+                if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                active.each(function (i, e) {
+                    $(e).removeClass('active').siblings('ul').hide();
+                });
+                $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                    $(e).children('a').addClass('active').siblings('ul').show();
+                });
+            }
+
+            $window.on('scroll', onScroll);
+            $(document).ready(function() {
+                $toc.find('a').parent('li').find('ul').hide();
+                onScroll();
+                document.getElementsByClassName('post-toc')[0].style.display = '';
+            });
+        }
+    })();
+</script>
 
 
 </html>

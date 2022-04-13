@@ -96,9 +96,18 @@ if (!doNotTrack) {
   </header>
 
   
+  <div class="post-toc">
+    <div class="post-toc-title">Contents</div>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#荷塘月色">荷塘月色</a></li>
+  </ul>
+</nav>
+  </div>
+  
 
   <div class="post-text">
-    <h1 id="荷塘月色">荷塘月色</h1>
+    <h2 id="荷塘月色">荷塘月色</h2>
 <blockquote>
 <p>朱自清（1898年11月22日—1948年8月12日），原名自华，号实秋，后改名自清，字佩弦。原籍浙江绍兴，出生于江苏省东海县（今连云港市东海县平明镇），后随父定居扬州。中国现代散文家、诗人、学者、民主战士。</p>
 <p>1916年中学毕业后成功考入北京大学预科。1919年开始发表诗歌。1921年，加入文学研究会，成立“为人生”代表作家。1922年，与叶圣陶等创办了我国新文学史上第一个诗刊——《诗》月刊，倡导新诗。次年，发表长诗《毁灭》，引起当时诗坛广泛注意，继而写《桨声灯影里的秦淮河》，被誉为“白话美术文的模范”。1924年，诗文集《踪迹》出版。1925年，应清华大学之聘，任中文系教授。创作由诗歌转向散文，同时致力于古典文学研究。“三·一八”惨案后，他撰写《执政府大屠杀记》等文章，声讨军阀政府暴行。1928年，第一部散文集《背影》出版。1930年，代理清华大学中文系主任。次年，留学英国，并漫游欧洲数国，著有《欧游杂记》、《伦敦杂记》。1932年归国，继任清华大学中文系教授兼系主任。“一二·九”运动中，他同学生一道上街游行。抗日战争爆发后，随校南迁，任西南联大教授。1946年10月返北平，受校方委托主编《闻一多全集》。同时，积极参加各项民主活动。1948年8月12日因胃穿孔病逝于北平，年仅50岁。</p>
@@ -152,25 +161,6 @@ if (!doNotTrack) {
   <div class="comments">
   <div class="comments">
 
-  <div class="comments-item comments-disqus">
-    <div id="disqus_thread"></div>
-    <script>
-      window.addEventListener("load", () => {
-        (function() {
-          
-          var d = document,
-            s = d.createElement("script");
-          s.src = "https://rainerchiang.disqus.com/embed.js";
-          s.setAttribute("data-timestamp", +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      });
-    </script>
-    <noscript>Please enable JavaScript to view the
-      <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-    </noscript>
-  </div>
-
 
 
   <div class="comments-item comments-valine">
@@ -223,6 +213,44 @@ if (!doNotTrack) {
 </script>
 
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+<script>
+    (function() {
+        var $toc = $('#TableOfContents');
+        if ($toc.length > 0) {
+            var $window = $(window);
+
+            function onScroll(){
+                var currentScroll = $window.scrollTop();
+                var h = $('.post-text h1, .post-text h2, .post-text h3, .post-text h4, .post-text h5, .post-text h6');
+                var id = "";
+                h.each(function (i, e) {
+                    e = $(e);
+                    if (e.offset().top - 10 <= currentScroll) {
+                        id = e.attr('id');
+                    }
+                });
+                var active = $toc.find('a.active');
+                if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                active.each(function (i, e) {
+                    $(e).removeClass('active').siblings('ul').hide();
+                });
+                $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                    $(e).children('a').addClass('active').siblings('ul').show();
+                });
+            }
+
+            $window.on('scroll', onScroll);
+            $(document).ready(function() {
+                $toc.find('a').parent('li').find('ul').hide();
+                onScroll();
+                document.getElementsByClassName('post-toc')[0].style.display = '';
+            });
+        }
+    })();
+</script>
 
 
 </html>
